@@ -1,0 +1,30 @@
+{#doc}
+
+<h1>{name}</h1>
+
+<table class="package_details">
+  <tr class="description">
+    <th>Description</th>
+    <td>{description}</td>
+  </tr>
+  {?website}
+  <tr class="website">
+    <th>Website</th>
+    <td><a href="{website}">{website}</a></td>
+  </tr>
+  {/website}
+  <tr clas="maintainers">
+    <th>Maintainers</th>
+    <td>
+      <ul>
+      {#maintainers}
+      <li>
+        {?website} <a href="{website}">{name}</a> {:else} {name} {/website}
+      </li>
+      {/maintainers}
+      </ul>
+    </td>
+  </tr>
+</table>
+
+{/doc}

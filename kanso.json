@@ -1,0 +1,20 @@
+{
+    "name": "repository",
+    "version": "0.0.1",
+    "description": "Kanso package repository CouchApp",
+    "load": "lib/app",
+    "modules": "lib",
+    "templates": "templates",
+    "attachments": "static",
+    "base_template": "base.html",
+    "dependencies": {
+        "modules": null,
+        "properties": null,
+        "attachments": null,
+        "settings": null,
+        "underscore": null,
+        "kanso-core": null,
+        "kanso-templates": null,
+        "kanso-types": null
+    }
+}
