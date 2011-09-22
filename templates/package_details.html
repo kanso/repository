@@ -1,30 +1,77 @@
 {#doc}
 
-<h1>{name}</h1>
+<div id="secondbar">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h1>{name}</h1>
+        <p>{description}</p>
+      </div>
+      <div class="span4">
+      </div>
+    </div>
+  </div>
+</div>
 
-<table class="package_details">
-  <tr class="description">
-    <th>Description</th>
-    <td>{description}</td>
-  </tr>
-  {?website}
-  <tr class="website">
-    <th>Website</th>
-    <td><a href="{website}">{website}</a></td>
-  </tr>
-  {/website}
-  <tr clas="maintainers">
-    <th>Maintainers</th>
-    <td>
-      <ul>
-      {#maintainers}
-      <li>
-        {?website} <a href="{website}">{name}</a> {:else} {name} {/website}
-      </li>
-      {/maintainers}
-      </ul>
-    </td>
-  </tr>
-</table>
+<div class="container">
+  <div id="content">
+    <div class="row">
+
+      <div class="span12">
+
+        <table class="package_details">
+          {?website}
+          <tr class="website">
+            <th>Website</th>
+            <td><a href="{website}">{website}</a></td>
+          </tr>
+          {/website}
+          {?maintainers}
+          <tr clas="maintainers">
+            <th>Maintainers</th>
+            <td>
+              <ul>
+              {#maintainers}
+              <li>
+                {?website} <a href="{website}">{name}</a> {:else} {name} {/website}
+              </li>
+              {/maintainers}
+              </ul>
+            </td>
+          </tr>
+          {/maintainers}
+          {?dependency_list}
+          <tr class="dependencies">
+            <th>Dependencies</th>
+            <td>
+              <ul>
+                {#dependency_list}
+                  <li><a href="{baseURL}/{.|uc}">{.}</a></li>
+                {/dependency_list}
+              </ul>
+            </td>
+          </tr>
+          {/dependency_list}
+          <tr class="versions">
+            <th>Versions</th>
+            <td>
+              <ul>
+              {#version_list}
+                <li>{.}</li>
+              {/version_list}
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="span4">
+        Sidebar
+      </div>
+
+    </div>
+  </div>
+</div>
 
 {/doc}
