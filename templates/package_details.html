@@ -29,6 +29,14 @@
             <td><a href="{website}">{website}</a></td>
           </tr>
           {/website}
+          <tr class="submitted_by">
+            <th>Submitted by</th>
+            <td><a href="{baseURL}/user/{submitted_by|uc}">{submitted_by}</a></td>
+          </tr>
+          <tr class="published">
+            <th>Published</th>
+            <td>{published_date}</td>
+          </tr>
           {?maintainers}
           <tr clas="maintainers">
             <th>Maintainers</th>
