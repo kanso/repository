@@ -7,6 +7,11 @@
     "templates": "templates",
     "attachments": "static",
     "base_template": "base.html",
+    "less": {
+        "compress": true,
+        "compile": "static/css/repository.less",
+        "remove_from_attachments": true
+    },
     "dependencies": {
         "modules": null,
         "properties": null,
@@ -15,6 +20,8 @@
         "underscore": null,
         "kanso-core": null,
         "kanso-templates": null,
-        "kanso-types": null
+        "kanso-types": null,
+        "app-session": null,
+        "less-precompiler": null
     }
 }
