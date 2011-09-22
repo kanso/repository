@@ -1,18 +1,7 @@
 @import "bootstrap.less";
 @import "adaptive.less";
 @import "topbar.less";
-
-#secondbar {
-    background: url(../img/secondbar_bg.png);
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 14px;
-    padding: 14px 0;
-}
-#secondbar a,
-#secondbar a:hover {
-    color: @grayDark;
-    text-decoration: none;
-}
+@import "secondbar.less";
 
 .versionlist {
     list-style-type: none;
@@ -39,4 +28,18 @@
     text-decoration: none;
     background-color: #fcfcfc;
     padding-left: 10px;
+}
+
+.package_details {
+    box-shadow: 0px 1px 1px #eee;
+}
+.package_details th {
+    vertical-align: top;
+    position: relative;
+    bottom: -1px;
+}
+.package_details ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
