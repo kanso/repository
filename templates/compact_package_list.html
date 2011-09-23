@@ -1,0 +1,16 @@
+<ul class="compact_package_list">
+{#rows}
+  <li class="package">
+    <div class="name">
+      <a title="{value.description}" href="{baseURL}/details/{id|uc}">
+        {value.name}
+      </a>
+    </div>
+    {?value.pptime}
+    <div class="time">
+      {value.pptime}
+    </div>
+    {/value.pptime}
+  </li>
+{/rows}
+</ul>
