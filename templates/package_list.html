@@ -1,0 +1,13 @@
+<ul class="package_list">
+{#rows}
+  <li class="package">
+    <h4 class="name"><a href="{baseURL}/details/{id|uc}">{value.name}</a></h4>
+    <p class="description">{value.description}</p>
+    {?value.extra}
+    <div class="extra">
+      {value.extra}
+    </div>
+    {/value.extra}
+  </li>
+{/rows}
+</ul>
