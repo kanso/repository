@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <h1>Package Repository</h1>
+        <h1>Package repository</h1>
         <p>Kanso packages provide additional build processes and resources for building CouchApps</p>
       </div>
       <div class="span4">
@@ -16,9 +16,13 @@
     <div class="row">
 
       <div class="span12">
-        <h3>Recently Updated</h3>
-
+        <h3>Latest updates</h3>
         {>"compact_package_list.html"/}
+
+        <h3>Most depended on</h3>
+        <div id="most_depended_on">
+          <div class="loading_message">Loading...</div>
+        </div>
       </div>
 
       <div class="span4">
