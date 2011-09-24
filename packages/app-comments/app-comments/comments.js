@@ -115,7 +115,7 @@ exports.addUserCommentsToPage = function (req, user, /*opt*/options, callback) {
 
 exports.add = function (target, user, text, callback) {
     var doc = {
-        type: 'app-session:comment',
+        type: 'app-comments:comment',
         target: target,
         user: user,
         text: text,
