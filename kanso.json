@@ -18,10 +18,12 @@
         "attachments": null,
         "settings": null,
         "underscore": null,
+        "datelib": null,
         "kanso-core": null,
         "kanso-templates": null,
         "kanso-types": null,
         "app-session": null,
+        "app-comments": null,
         "less-precompiler": null
     }
 }

@@ -49,6 +49,10 @@ exports.prettify = function (d) {
  */
 
 exports.ISODateString = function (d) {
+    if (!d) {
+        // default to current time
+        var d = new Date();
+    }
     function pad(n){
         return n < 10 ? '0' + n : n;
     }
