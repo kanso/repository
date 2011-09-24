@@ -3,7 +3,7 @@
     <div class="row">
       <div class="span12">
         <h1>{name}</h1>
-        <p>Packages submitted to the repository by {name}</p>
+        <p>Respository activity by {name}</p>
       </div>
       <div class="span4">
       </div>
@@ -16,7 +16,13 @@
     <div class="row">
 
       <div class="span12">
+        <h3>Packages</h3>
         {>"package_list.html"/}
+
+        <h3>Comments</h3>
+        <div id="comments">
+          <div class="loading_message">Loading...</div>
+        </div>
       </div>
 
       <div class="span4">
