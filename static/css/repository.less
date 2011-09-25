@@ -3,31 +3,44 @@
 @import "topbar.less";
 @import "secondbar.less";
 
-.versionlist {
+h1 a, h1 a:hover,
+h2 a, h2 a:hover,
+h3 a, h3 a:hover,
+h4 a, h4 a:hover {
+    color: @grayDark;
+    text-decoration: none;
+}
+
+.versionlist,
+.sortlist {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.versionlist li a {
+.versionlist li a,
+.sortlist li a {
     display: block;
     border-top: 1px dotted #eee;
     padding: 5px 7px;
     color: @grayDark;
 }
 
+.versionlist li a:hover,
+.sortlist li a:hover {
+    text-decoration: none;
+    background-color: #fcfcfc;
+    padding-left: 10px;
+}
+
 .versionlist li.active a,
-.versionlist li.active a:hover {
+.versionlist li.active a:hover,
+.sortlist li.active a,
+.sotrlist li.active a:hover {
     background-color: @grayLighter;
     font-weight: bold;
     text-shadow: 0 1px 0 @white;
     padding-left: 7px;
-}
-
-.versionlist li a:hover {
-    text-decoration: none;
-    background-color: #fcfcfc;
-    padding-left: 10px;
 }
 
 .package_details {
@@ -113,4 +126,19 @@
 .comments li.comment .time {
     color: @gray;
     margin-left: 0.25em;
+}
+
+#total_packages a {
+    display: block;
+    padding: 0.5em 1em;
+    color: @grayDark;
+    background: @grayLighter;
+    border: 1px dotted @grayLight;
+    .border-radius(5px)
+}
+#total_packages a:hover {
+    text-decoration: none;
+    color: @black;
+    background: @grayLighter;
+    border: 1px solid #aaa;
 }

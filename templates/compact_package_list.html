@@ -3,7 +3,7 @@
   <li class="package">
     <div class="name">
       <a title="{value.description}" href="{baseURL}/details/{id|uc}">
-        {value.name}
+        {?value.name}{value.name}{:else}{key}{/value.name}
       </a>
     </div>
     {?value.extra}
