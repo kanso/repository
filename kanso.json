@@ -2,6 +2,7 @@
     "name": "repository",
     "version": "0.0.1",
     "description": "Kanso package repository CouchApp",
+    "baseURL": "/packages",
     "load": "lib/app",
     "modules": "lib",
     "templates": "templates",
