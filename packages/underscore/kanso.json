@@ -1,13 +1,13 @@
 {
     "name": "underscore",
-    "version": "1.1.5",
+    "version": "1.2.0",
     "maintainers": [
         {
             "name": "Caolan McMahon",
-            "website": "http://caolanmcmahon.com"
+            "url": "http://caolanmcmahon.com"
         }
     ],
-    "website": "http://documentcloud.github.com/underscore/",
+    "url": "http://documentcloud.github.com/underscore/",
     "modules": "underscore.js",
     "modules_attachment": false,
     "dependencies": {

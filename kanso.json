@@ -2,12 +2,15 @@
     "name": "repository",
     "version": "0.0.1",
     "description": "Kanso package repository CouchApp",
-    "baseURL": "/packages",
     "load": "lib/app",
     "modules": "lib",
-    "templates": "templates",
     "attachments": "static",
-    "base_template": "base.html",
+    "dust": {
+        "templates": "templates"
+    },
+    "duality": {
+        "base_template": "base.html"
+    },
     "less": {
         "compress": true,
         "compile": "static/css/repository.less",
@@ -20,11 +23,12 @@
         "settings": null,
         "underscore": null,
         "datelib": null,
-        "kanso-core": null,
-        "kanso-templates": null,
-        "kanso-types": null,
-        "app-session": null,
-        "app-comments": null,
+        "duality": null,
+        "dust": null,
+        "duality-dust": null,
+        "couchtypes": null,
+        "duality-contrib-session": null,
+        "duality-contrib-comments": null,
         "less-precompiler": null
     }
 }

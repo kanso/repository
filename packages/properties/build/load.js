@@ -1,6 +1,7 @@
-var modules = require('kanso/lib/modules'),
-    utils = require('kanso/lib/utils'),
-    _ = require('kanso/deps/underscore/underscore')._;
+var modules = require('kanso/modules'),
+    logger = require('kanso/logger'),
+    utils = require('kanso/utils'),
+    _ = require('underscore/underscore')._;
 
 
 var proxyFn = function (path, app, doc, props) {
@@ -22,7 +23,7 @@ var proxyFns = function (path, app, doc, prop) {
     }
 };
 
-var load = function (module_cache, doc, settings) {
+var load = function (module_cache, doc, settings, name) {
     var p = settings.load;
     var app = modules.require(module_cache, doc, '/', p);
 
@@ -36,6 +37,14 @@ var load = function (module_cache, doc, settings) {
                 }
             }
             else {
+                if (doc[k] && doc[k] !== app[k]) {
+                    logger.debug('Existing value', doc[k].toString());
+                    logger.debug('New value', app[k].toString());
+                    throw new Error(
+                        'Conflicting property values for "' + k + '"' +
+                        ' caused by ' + name
+                    );
+                }
                 doc[k] = app[k];
             }
         }
@@ -65,7 +74,7 @@ module.exports = function (root, path, settings, doc, callback) {
     for (var k in doc._load) {
         if (doc._load[k] && doc._load[k].load) {
             try {
-                load(module_cache, doc, doc._load[k]);
+                load(module_cache, doc, doc._load[k], k);
             }
             catch (e) {
                 return callback(e);

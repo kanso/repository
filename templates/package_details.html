@@ -23,12 +23,12 @@
 
         {#cfg}
         <table class="package_details">
-          {?website}
-          <tr class="website">
-            <th>Website</th>
-            <td><a href="{website}">{website}</a></td>
+          {?url}
+          <tr class="url">
+            <th>URL</th>
+            <td><a href="{url}">{url}</a></td>
           </tr>
-          {/website}
+          {/url}
           <tr class="submitted_by">
             <th>Submitted by</th>
             <td><a href="{baseURL}/user/{submitted_by|uc}">{submitted_by}</a></td>
@@ -44,7 +44,7 @@
               <ul>
               {#maintainers}
               <li>
-                {?website} <a href="{website}">{name}</a> {:else} {name} {/website}
+                {?url} <a href="{url}">{name}</a> {:else} {name} {/url}
               </li>
               {/maintainers}
               </ul>
@@ -68,7 +68,7 @@
 
 
         <h4>Comments</h4>
-        {>"app-comments/form.html"/}
+        {>"duality-contrib-comments/form.html"/}
 
         <div id="comments"></div>
 
