@@ -7,10 +7,8 @@
         "modules": null,
         "underscore": null,
         "db": ">=0.0.8",
-        "couchtypes-fields": null,
-        "couchtypes-fieldset": null,
-        "couchtypes-widgets": null,
-        "couchtypes-permissions": null
+        "sanitize": ">=0.0.8",
+        "events": null
     },
     "postprocessors": {
         "remove_property": "build/remove_property"
