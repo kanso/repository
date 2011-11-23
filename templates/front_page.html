@@ -16,10 +16,10 @@
     <div class="row">
 
       <div class="span12">
-        <h3><a href="{baseURL}/all/updated">Latest updates</h3>
-        {>"compact_package_list.html"/}
+        <h3><a href="{{baseURL}}/all/updated">Latest updates</h3>
+        {{{include "compact_package_list.html"}}}
 
-        <h3><a href="{baseURL}/all/dependents">Most depended on</a></h3>
+        <h3><a href="{{baseURL}}/all/dependents">Most depended on</a></h3>
         <div id="most_depended_on">
           <div class="loading_message">Loading...</div>
         </div>

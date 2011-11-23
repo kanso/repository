@@ -1,16 +1,16 @@
 <ul class="compact_user_list">
-{#rows}
+{{#each rows}}
   <li class="user">
     <div class="name">
-      <a href="{baseURL}/user/{id|uc}">
-        {value.name}
+      <a href="{{baseURL}}/user/{{uc id}}">
+        {{value.name}}
       </a>
     </div>
-    {?value.extra}
+    {{#if value.extra}}
     <div class="extra">
-      {value.extra}
+      {{value.extra}}
     </div>
-    {/value.extra}
+    {{/if}}
   </li>
-{/rows}
+{{/each}}
 </ul>

@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <h1><a href="{baseURL}/all">All packages</a></h1>
-        <p>{subheading}</p>
+        <h1><a href="{{baseURL}}/all">All packages</a></h1>
+        <p>{{subheading}}</p>
       </div>
       <div class="span4">
       </div>
@@ -16,17 +16,17 @@
     <div class="row">
 
       <div class="span12">
-        {>"compact_package_list.html"/}
+        {{{include "compact_package_list.html"}}}
       </div>
 
       <div class="span4">
         <div id="sidebar" class="span4">
           <ul class="sortlist">
-            {#sort_list}
-            <li{?active} class="active"{/active}>
-              <a href="{baseURL}{link}">{name}</a>
+            {{#each sort_list}}
+            <li{{#if active}} class="active"{{/if}}>
+              <a href="{{baseURL}}{{link}}">{{name}}</a>
             </li>
-            {/sort_list}
+            {{/each}}
         </div>
       </div>
 

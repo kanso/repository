@@ -1,0 +1,21 @@
+{
+    "name": "duality-contrib-session-hb",
+    "version": "0.0.1",
+    "description": "Provides a basic, unstyled session panel for logging-in and logging-out. Requires the use of duality and binds to session change events",
+    "load": "duality/contrib/session/app",
+    "modules": "duality/contrib/session",
+    "handlebars": {
+        "templates": "templates"
+    },
+    "dependencies": {
+        "modules": null,
+        "properties": null,
+        "settings": null,
+        "session": "0.0.8",
+        "duality": null,
+        "handlebars": null,
+        "duality-handlebars": null,
+        "cookies": null,
+        "db": null
+    }
+}

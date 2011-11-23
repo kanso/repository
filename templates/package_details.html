@@ -1,11 +1,9 @@
-{#doc}
-
 <div id="secondbar">
   <div class="container">
     <div class="row">
       <div class="span12">
-        <h1><a href="{baseURL}/details/{_id|uc}">{name}</a></h1>
-        <p>{description}</p>
+        <h1><a href="{{baseURL}}/details/{{uc doc._id}}">{{doc.name}}</a></h1>
+        <p>{{doc.description}}</p>
       </div>
       <div class="span4">
       </div>
@@ -13,70 +11,64 @@
   </div>
 </div>
 
-{/doc}
-
 <div class="container">
   <div id="content">
     <div class="row">
 
       <div class="span12">
 
-        {#cfg}
         <table class="package_details">
-          {?url}
+          {{#if cfg.url}}
           <tr class="url">
             <th>URL</th>
-            <td><a href="{url}">{url}</a></td>
+            <td><a href="{{cfg.url}}">{{cfg.url}}</a></td>
           </tr>
-          {/url}
+          {{/if}}
           <tr class="submitted_by">
             <th>Submitted by</th>
-            <td><a href="{baseURL}/user/{submitted_by|uc}">{submitted_by}</a></td>
+            <td><a href="{{baseURL}}/user/{{uc doc.submitted_by}}">{{doc.submitted_by}}</a></td>
           </tr>
           <tr class="published">
             <th>Published</th>
-            <td>{published_date}</td>
+            <td>{{published_date}}</td>
           </tr>
-          {?maintainers}
+          {{#if cfg.maintainers}}
           <tr clas="maintainers">
             <th>Maintainers</th>
             <td>
               <ul>
-              {#maintainers}
+              {{#each cfg.maintainers}}
               <li>
-                {?url} <a href="{url}">{name}</a> {:else} {name} {/url}
+                {{#if url}} <a href="{{url}}">{{name}}</a> {{else}} {{name}} {{/if}}
               </li>
-              {/maintainers}
+              {{/each}}
               </ul>
             </td>
           </tr>
-          {/maintainers}
-          {?dependency_list}
+          {{/if}}
+          {{#if dependency_list}}
           <tr class="dependencies">
             <th>Dependencies</th>
             <td>
               <ul>
-                {#dependency_list}
-                  <li><a href="{baseURL}/details/{.|uc}">{.}</a></li>
-                {/dependency_list}
+                {{#each dependency_list}}
+                  <li><a href="{{baseURL}}/details/{{uc this}}">{{this}}</a></li>
+                {{/each}}
               </ul>
             </td>
           </tr>
-          {/dependency_list}
+          {{/if}}
         </table>
-        {/cfg}
       </div>
 
-      {#doc}
       <div id="sidebar" class="span4">
         <ul class="versionlist">
-          {#version_list}
-          <li{?active} class="active"{/active}>
-            <a href="{baseURL}/details/{_id|uc}/{version|uc}">{version}</a>
+          {{#each version_list}}
+          <li{{#if active}} class="active"{{/if}}>
+            <a href="{{baseURL}}/details/{{uc _id}}/{{uc version}}">{{version}}</a>
           </li>
-          {/version_list}
+          {{/each}}
       </div>
-      {/doc}
 
     </div>
   </div>
