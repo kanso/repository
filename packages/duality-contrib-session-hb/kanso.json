@@ -1,6 +1,6 @@
 {
     "name": "duality-contrib-session-hb",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Provides a basic, unstyled session panel for logging-in and logging-out. Requires the use of duality and binds to session change events",
     "load": "duality/contrib/session/app",
     "modules": "duality/contrib/session",

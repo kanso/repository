@@ -16,6 +16,12 @@
         "compile": "static/css/repository.less",
         "remove_from_attachments": true
     },
+    "duality-contrib-session": {
+        "signup": {
+            "text": "Create account",
+            "url": "/create_account/"
+        }
+    },
     "dependencies": {
         "modules": null,
         "properties": null,
@@ -28,7 +34,7 @@
         "handlebars-helpers": null,
         "duality-handlebars": null,
         "couchtypes": null,
-        "duality-contrib-session-hb": null,
+        "duality-contrib-session-hb": ">=0.0.2",
         "less-precompiler": null
     }
 }

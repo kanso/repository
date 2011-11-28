@@ -1,13 +1,22 @@
-{{#with userCtx}}
-<div id="session" class="{{#if name}}loggedin{{else}}loggedout{{/if}}">
-  {{#if name}}
-  <span class="username">{{name}}</span>
+<div id="session" class="{{#if userCtx.name}}loggedin{{else}}loggedout{{/if}}">
+  {{#if userCtx.name}}
+  <span class="username">{{userCtx.name}}</span>
   {{/if}}
   <ul class="actions">
-    {{#if name}}
+    {{#if userCtx.name}}
       <li class="logout"><a href="#">Logout</a></li>
-      <!--<li class="signup"><a href="#">Signup</a></li>-->
     {{else}}
+      {{#if session_signup_url}}
+      <li class="signup">
+        <a href="{{session_signup_url}}?next={{uc current_url}}">
+          {{#if session_signup_text}}
+            {{session_signup_text}}
+          {{else}}
+            Signup
+          {{/if}}
+        </a>
+      </li>
+      {{/if}}
       <li class="login"><a href="#">Login</a></li>
     {{/if}}
   </ul>
@@ -33,4 +42,3 @@
     </form>
   </div>
 </div>
-{{/with}}

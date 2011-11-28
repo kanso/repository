@@ -3,6 +3,7 @@
  */
 
 var session = require('session'),
+    settings = require('settings/root'),
     templates = require('duality/templates'),
     duality_events = require('duality/events'),
     utils = require('duality/utils'),
@@ -48,8 +49,17 @@ session.on('change', function (userCtx) {
         if (err) {
             return console.error(err);
         }
+        var ctx = {userCtx: userCtx};
+        if (settings['duality-contrib-session']) {
+            var signup = settings['duality-contrib-session'].signup;
+            if (signup) {
+                ctx.session_signup_text = signup.text;
+                ctx.session_signup_url = signup.url;
+                ctx.current_url = window.location;
+            }
+        }
         $('#session').replaceWith(
-            templates.render('duality-contrib-session/session.html', req, userCtx)
+            templates.render('duality-contrib-session/session.html', req, ctx)
         );
         controls.bind();
     });
