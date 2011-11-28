@@ -1,8 +1,8 @@
 <ul class="package_list">
 {{#each rows}}
   <li class="package">
-    <h5 class="name"><a href="{{baseURL}}/details/{{uc id}}">{{value.name}}</a></h5>
-    <p class="description">{{value.description}}</p>
+    <strong class="name"><a href="{{baseURL}}/details/{{uc id}}">{{value.name}}</a></strong>
+    <div class="description">{{value.description}}</div>
     {{#if value.extra}}
     <div class="extra">
       {{value.extra}}

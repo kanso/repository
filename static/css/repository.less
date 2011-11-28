@@ -4,6 +4,7 @@
 @import "secondbar.less";
 @import "comments.less";
 @import "headings.less";
+@import "sidebar.less";
 
 
 .versionlist,
@@ -82,14 +83,22 @@
 }
 
 .package_list {
-    margin: 0.5em 1em 2em 1em;
+    margin: 0.5em 1em 2em 0em;
     padding: 0;
     list-style-type: none;
 }
 
+.package_list li .name {
+    font-size: 1.1em;
+}
+
+.package_list li .description {
+    margin: 0.1em 0 0 0;
+}
+
 .package_list li .extra {
     color: @gray;
-    margin: 0.5em 0 1em 0;
+    margin: 0.5em 0 1.25em 0;
 }
 
 #total_packages a {
@@ -105,4 +114,8 @@
     color: @black;
     background: @grayLighter;
     border: 1px solid #aaa;
+}
+
+#sidebar .menu li a {
+    color: blue !important;
 }

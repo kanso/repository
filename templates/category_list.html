@@ -1,0 +1,10 @@
+<ul id="categories" class="menu">
+  <li {{#ifequal current_category "all"}}class="active"{{/ifequal}}>
+    <a href="{{baseURL}}/all">All ({{total_packages}})</a>
+  </li>
+  {{#each categories}}
+  <li {{#ifequal ../current_category key}}class="active"{{/ifequal}}>
+      <a href="{{baseURL}}/category/{{uc key}}">{{name}} ({{count}})</a>
+    </li>
+  {{/each}}
+</ul>
