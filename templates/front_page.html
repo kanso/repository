@@ -16,8 +16,11 @@
     <div class="row">
 
       <div class="span12">
+
         <h2>Latest updates</h2>
-        {{{include "compact_package_list.html"}}}
+        <div id="latest_updates">
+          <div class="loading_message">Loading...</div>
+        </div>
 
         <h2>Most depended on</h2>
         <div id="most_depended_on">
@@ -28,23 +31,12 @@
         <div id="top_submitters">
           <div class="loading_message">Loading...</div>
         </div>
+
       </div>
 
       <div id="sidebar" class="span4">
-        <!--
-        <div id="search_box">
-          <h5>Search</h5>
-          <form id="search_box_form" action="" method="GET">
-            <input type="text" name="q" />
-            <input type="submit" value="Go" />
-          </form>
-        </div>
-        -->
-        <!--
-        <div id="total_packages"></div>
-        -->
         <h4>Categories</h4>
-        <ul id="categories"></ul>
+        {{{include "category_list.html"}}}
       </div>
 
     </div>

@@ -1,6 +1,9 @@
-<ul class="compact_user_list">
+<ol class="compact_user_list">
 {{#each rows}}
-  <li class="user">
+  <li class="user" rel="{{value.name}}">
+    {{#if value.avatar}}
+      <img class="avatar" src="{{value.avatar}}" alt="{{value.name}}" />
+    {{/if}}
     <div class="name">
       <a href="{{baseURL}}/user/{{uc id}}">
         {{value.name}}
@@ -13,4 +16,4 @@
     {{/if}}
   </li>
 {{/each}}
-</ul>
+</ol>
