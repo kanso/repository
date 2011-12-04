@@ -37,6 +37,8 @@
         "duality-contrib-session-hb": ">=0.0.2",
         "less-precompiler": null,
         "gravatar": null,
-        "semver": null
+        "semver": null,
+        "sanitize": null,
+        "path": null
     }
 }
