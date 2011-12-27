@@ -54,48 +54,40 @@ table.details ul {
     margin: 0 0 0 0;
     padding: 0.5em 1em;
 }
-.package_list,
-.user_list {
+
+.repository_list {
     list-style-type: none;
-    margin: 0 0 0 0;
-    padding: 0.5em 1em;
-}
-.package_list li,
-.user_list li {
-    position: relative;
-    min-height: 32px;
-}
-.package_list li .name,
-.user_list li .name {
-    position: absolute;
-    top: 3;
-    left: 0;
-}
-.package_list .extra,
-.user_list .extra {
-    position: absolute;
-    top: 0;
-    right: 1.5em;
-    color: @gray;
+    margin: 0;
+    padding: 0;
 }
 
-.user_list li {
-    position: relative;
-    margin-bottom: 1em;
-    height: 24px;
-}
-.user_list li .avatar,
-.package_list li .avatar {
-    position: absolute;
-    top: 0;
-    left: 0;
+.repository_list .thumb {
     width: 32px;
     height: 32px;
+    margin-left: 1em;
 }
-.user_list li .name {
-    position: absolute;
-    top: 0;
-    left: 52px;
+.repository_list .extra {
+    color: @gray;
+    margin-right: 1em;
+}
+.repository_list .extra_container {
+    text-align: right;
+}
+.repository_list .details {
+    padding: 0 1em;
+}
+.repository_list .description {
+    color: @gray;
+    margin-bottom: 1em;
+}
+.repository_list .main {
+    font-weight: bold;
+}
+.repository_list .action {
+    font-style: italic;
+}
+.repository_list li {
+    margin-bottom: 0.33em;
 }
 
 #total_packages a {

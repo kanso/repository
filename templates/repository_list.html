@@ -1,0 +1,46 @@
+<ul class="repository_list">
+  {{#each rows}}
+    <li class="row">
+
+      {{#if value.avatar}}
+        <div class="span1">
+          <img class="thumb" src="{{value.avatar}}" />
+        </div>
+      {{/if}}
+
+      <div class="span9">
+        <div class="details">
+          {{#if value.user}}
+            <span class="user{{#if value.description}} main{{/if}}">
+              <a href="{{baseURL}}/user/{{uc value.user}}">
+                {{value.user}}
+              </a>
+            </span>
+          {{/if}}
+          {{#if value.action}}
+            <span class="action">{{value.action}}</span>
+          {{/if}}
+          {{#if value.name}}
+            <span class="name{{#unless value.user}}{{#if value.description}} main{{/if}}{{/unless}}">
+              <a title="{{value.description}}" href="{{baseURL}}/details/{{uc id}}">
+                {{#if value.name}}{{value.name}}{{else}}{{key}}{{/if}}
+              </a>
+            </span>
+          {{/if}}
+          {{#if value.description}}
+            <div class="description">
+              {{value.description}}
+            </div>
+          {{/if}}
+        </div>
+      </div>
+
+      {{#if value.extra}}
+        <div class="extra_container span{{#if value.avatar}}2{{else}}3{{/if}}">
+          <span class="extra">{{value.extra}}</span>
+        </div>
+      {{/if}}
+
+    </li>
+  {{/each}}
+</ul>
