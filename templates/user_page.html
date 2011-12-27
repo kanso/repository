@@ -1,0 +1,52 @@
+<div id="secondbar">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h1>{{name}}</h1>
+        <p>
+          {{#if website}}
+            <a href="{{website}}">{{website}}</a>
+          {{else}}
+            Packages uploaded to the respository by {{name}}
+          {{/if}}
+        </p>
+      </div>
+      <div class="span4">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="content">
+    <div class="row">
+
+      <div id="user_details" class="span12">
+
+        <table class="details">
+          <tbody>
+            <tr>
+              <th>Total packages</th>
+              <td class="total_packages">{{total_packages}}</td>
+            </tr>
+            <tr>
+              <th>Last update</th>
+              <td class="last_update">{{last_update}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        {{{include "package_list.html"}}}
+
+      </div>
+
+      <div id="sidebar" class="span4">
+        <ul class="compact_menu">
+          <li><a href="{{baseURL}}">Home</a></li>
+          <li><a href="{{baseURL}}/all">All packages</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

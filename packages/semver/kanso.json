@@ -2,7 +2,7 @@
     "name": "semver",
     "version": "1.0.12",
     "description" : "Browser-compatible verson of the semantic version parser used by NPM",
-    "website": "https://github.com/isaacs/node-semver",
+    "url": "https://github.com/isaacs/node-semver",
     "modules": "semver.js",
     "dependencies": {
         "modules": null,

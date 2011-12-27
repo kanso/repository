@@ -7,47 +7,44 @@
 @import "sidebar.less";
 
 
-.versionlist,
-.sortlist {
+.compact_menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.versionlist li a,
-.sortlist li a {
+.compact_menu li a {
     display: block;
     border-top: 1px dotted #eee;
     padding: 5px 7px;
+}
+.versionlist li a {
     color: @grayDark;
 }
 
-.versionlist li a:hover,
-.sortlist li a:hover {
+.compact_menu li a:hover {
     text-decoration: none;
     background-color: #fcfcfc;
     padding-left: 10px;
 }
 
-.versionlist li.active a,
-.versionlist li.active a:hover,
-.sortlist li.active a,
-.sotrlist li.active a:hover {
+.compact_menu li.active a,
+.compact_menu li.active a:hover {
     background-color: @grayLighter;
     font-weight: bold;
     text-shadow: 0 1px 0 @white;
     padding-left: 7px;
 }
 
-.package_details {
+table.details {
     box-shadow: 0px 1px 1px #eee;
 }
-.package_details th {
+table.details th {
     vertical-align: top;
     position: relative;
     bottom: -1px;
 }
-.package_details ul {
+table.details ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -57,64 +54,48 @@
     margin: 0 0 0 0;
     padding: 0.5em 1em;
 }
-.compact_package_list,
-.compact_user_list {
+.package_list,
+.user_list {
     list-style-type: none;
     margin: 0 0 0 0;
     padding: 0.5em 1em;
 }
-.compact_package_list li,
-.compact_user_list li {
+.package_list li,
+.user_list li {
     position: relative;
-    height: 20px;
+    min-height: 32px;
 }
-.compact_package_list li .name,
-.compact_user_list li .name {
+.package_list li .name,
+.user_list li .name {
     position: absolute;
     top: 3;
     left: 0;
 }
-.compact_package_list .extra,
-.compact_user_list .extra {
+.package_list .extra,
+.user_list .extra {
     position: absolute;
     top: 0;
     right: 1.5em;
     color: @gray;
 }
 
-.compact_user_list li {
+.user_list li {
     position: relative;
     margin-bottom: 1em;
     height: 24px;
 }
-.compact_user_list li .avatar {
+.user_list li .avatar,
+.package_list li .avatar {
     position: absolute;
     top: 0;
     left: 0;
+    width: 32px;
+    height: 32px;
 }
-.compact_user_list li .name {
+.user_list li .name {
     position: absolute;
     top: 0;
     left: 52px;
-}
-
-.package_list {
-    margin: 0.5em 1em 2em 0em;
-    padding: 0;
-    list-style-type: none;
-}
-
-.package_list li .name {
-    font-size: 1.1em;
-}
-
-.package_list li .description {
-    margin: 0.1em 0 0 0;
-}
-
-.package_list li .extra {
-    color: @gray;
-    margin: 0.5em 0 1.25em 0;
 }
 
 #total_packages a {

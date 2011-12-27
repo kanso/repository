@@ -1,8 +1,22 @@
 <ul class="package_list">
 {{#each rows}}
   <li class="package">
-    <strong class="name"><a href="{{baseURL}}/details/{{uc id}}">{{value.name}}</a></strong>
-    <div class="description">{{value.description}}</div>
+    {{#if value.avatar}}
+      <img class="avatar" src="{{value.avatar}}" />
+    {{/if}}
+    <div class="user">
+      <a href="{{baseURL}}/user/{{uc value.submitted_by}}">
+        {{value.submitted_by}}
+      </a>
+    </div>
+    <div class="name">
+      <a title="{{value.description}}" href="{{baseURL}}/details/{{uc id}}">
+        {{#if value.name}}{{value.name}}{{else}}{{key}}{{/if}}
+      </a>
+    </div>
+    <div class="description">
+      {{value.description}}
+    </div>
     {{#if value.extra}}
     <div class="extra">
       {{value.extra}}
